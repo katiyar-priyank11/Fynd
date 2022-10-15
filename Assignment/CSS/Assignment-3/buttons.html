@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        .heading{
+            text-align: center;
+        }
+        button{
+            padding: 0.7em;
+            border-radius: 5px;
+            border: 0;
+            overflow: hidden;
+            color: white;
+            width: 20%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+        #buy{
+            background-color: navy;
+        }
+        #ok{
+            background-color: olive;
+        }
+        #delete{
+            background-color: crimson;
+        }
+        .btn{
+            width:20%;
+            display: inline-block;
+            background-color: navy;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: 0;
+            color: white;
+            cursor: default;
+            white-space: nowrap;
+        }
+        #buy:active{
+            background-color: darkslategrey;
+        }
+        #delete:hover{
+            background-color: darkred;
+        }
+        #ok:active{
+            background-color: darkgreen;
+        }
+        .btn:hover{
+            background-color: blue;
+        }
+        .btn:active{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="heading">Buttons</h1>
+        </div>
+    </header>
+    <main>
+        <div style="text-align: center;">
+            <button class="bton" id="buy">Buy Now!</button>
+            <button class="bton" id="ok">OK! Got it! Great!</button>
+            <button class="bton" id="delete">Delete</button>
+                <a id="google" href="https://www.google.co.in/" target="_blank">
+                    <div class="btn">Google Search</div>
+                </a>
+            
+        </div>
+    </main>
+</body>
+</html>
