@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <style>
+        .nav-list{
+            display: inline-block;
+            margin-right: 20px;
+            padding-bottom: 11px;
+            
+        }
+        .nav-link{
+            text-decoration: none;
+            color: lightgray;
+            font-size: 24px;
+        }
+        .nav-bar{
+            background: navy;
+            height: 64px;
+            position: fixed;
+            top:0;
+            width: 100%;
+        }
+        #logo{
+            width: 22px;
+            margin-top: 5px;
+            margin-left: 10px;
+            opacity: 0.7;
+        }
+
+        #logo{
+            width: 22px;
+            margin-top: 5px;
+            margin-left: 10px;
+            opacity: 0.7;
+        }
+
+        #logo:hover{
+            opacity: 1;
+        }
+
+        #portfolio{
+            border-bottom: rgb( 241, 86, 90 ) 0.25em solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul style="list-style-type: none;">
+                <li class="nav-list">
+                    <a class ="nav-logo" href="/CSS/Assignment-1/Home.html" target="_blank">
+                        <img id="logo" src="/Images/xyz.png" alt="logo">
+                    </a>
+                </li>
+
+                <li class="nav-list" id="home" >
+                    <a class ="nav-link" href="/CSS/Assignment-1/Home.html" target="_blank">Home</a>
+                </li>
+                <li class="nav-list" id="portfolio">
+                    <a class ="nav-link" href="/CSS/Assignment-1/Portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-list" id="contact">
+                    <a class ="nav-link" href="/CSS/Assignment-1/Contact.html" target="_blank">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main style="margin-top: 74px; margin-left: 45px;">
+        <h1 style="margin-top:10px">Example Consulting Pvt. Ltd.</h1><hr>
+        <h2>Portfolio</h2>
+        <h3>Project 1</h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit natus, non accusamus aliquam minus!
+        <h3>Project 2</h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit natus, non accusamus aliquam minus!
+        <div>
+            <h2>Plans</h2>
+            <table border="2.5px" style="border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">Plan</th>
+                        <th rowspan="2" scope="col">Max cluster size</th>
+                        <th rowspan="2" scope="col">Cloud provider</th>
+                        <th colspan="2" scope="col">Price in USD(per node)</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Billed per hour</th>
+                        <th scope="col">Billed per month</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="3" scope="row">Free Tier</th>
+                        <td>3</td>
+                        <td>AWS</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Azure</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>GCP</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="3" scope="row">Basic</th>
+                        <td>15</td>
+                        <td>AWS</td>
+                        <td>0.10</td>
+                        <td>0.05</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Azure</td>
+                        <td>0.15</td>
+                        <td>0.05</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>GCP</td>
+                        <td>0.10</td>
+                        <td>0.05</td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="3" scope="row">Pro</th>
+                        <td>200</td>
+                        <td>AWS</td>
+                        <td>0.07</td>
+                        <td>0.03</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>Azure</td>
+                        <td>0.10</td>
+                        <td>0.05</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>GCP</td>
+                        <td>0.12</td>
+                        <td>0.06</td>
+                    </tr>
+                </tbody>
+                <caption align="bottom">Hosting Plans and pricing for various Cloud Providers</caption>
+            </table>
+        </div><hr>
+
+    </main>
+    <footer>&#169; example.com</footer>
+</body>
+</html>

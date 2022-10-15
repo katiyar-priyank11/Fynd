@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        div{
+            padding: 5px;
+            
+        }
+        fieldset{
+            display: inline;
+            padding: 5px;
+        }
+        label{
+            display: block;
+        }
+        .platforms{
+            display: inline;
+        }
+
+        .nav-list{
+            display: inline-block;
+            margin-right: 20px;
+            padding-bottom: 11px;
+            
+        }
+        .nav-link{
+            text-decoration: none;
+            color: lightgray;
+            font-size: 24px;
+        }
+        .nav-bar{
+            background: navy;
+            height: 64px;
+            position: fixed;
+            top:0;
+            width: 100%;
+        }
+        #logo{
+            width: 22px;
+            margin-top: 5px;
+            margin-left: 10px;
+            opacity: 0.7;
+        }
+
+        #logo:hover{
+            opacity: 1;
+        }
+
+        #contact{
+            border-bottom: rgb( 241, 86, 90 ) 0.25em solid;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <ul style="list-style-type: none;">
+                <li class="nav-list">
+                    <a class ="nav-logo" href="/CSS/Assignment-1/Home.html" target="_blank">
+                        <img id="logo" src="/Images/xyz.png" alt="logo">
+                    </a>
+                </li>
+
+                <li class="nav-list" id="home" >
+                    <a class ="nav-link" href="/CSS/Assignment-1/Home.html" target="_blank">Home</a>
+                </li>
+                <li class="nav-list" id="portfolio">
+                    <a class ="nav-link" href="/CSS/Assignment-1/Portfolio.html" target="_blank">Portfolio</a>
+                </li>
+                <li class="nav-list" id="contact">
+                    <a class ="nav-link" href="/CSS/Assignment-1/Contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main style="margin-top: 74px; margin-left: 45px;">
+        <h1 style="margin-top:10px">Example Consulting Pvt. Ltd.</h1><hr>
+        <h2>Contact us</h2>
+        Phone: <a href="tel:+001-123-456-7890">+001-123-456-7890</a><br>
+        Email: <a href="mailto:hello@example.com"> hello@example.com</a>
+        
+        <h2>Drop a message</h2>
+        <p>Please drop us a message by filling out this form, and we will get back to you within 2 working days.</p>
+
+        <p>Fields marked with * are required</p>
+        
+        <form action="Response.html" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="name">Your Name *</label>
+                <input type="text" name="user_name" id="name" required placeholder="John Doe">
+            </div>
+            <div>
+              <label for="email">Your Email *</label>
+              <input type="email" name="user_email" id="email" required placeholder="john.doe@example.com">  
+            </div>
+            <div>
+                <label for="buildType">What are you looking to build? *</label>
+                <select name="build" id="buildType" required>
+                    <option value="" selected>--Choose one--</option>
+                    <option value="blog">Blog</option>
+                    <option value="onlineStore">Online Store</option>
+                    <option value="game">Game</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Platforms you plan to support *</legend>
+                    <input type="checkbox" name="web" id="web">
+                    <label for="web" class="platforms">Web</label>
+                
+                    <input type="checkbox" name="mobile" id="mobile">
+                    <label for="mobile" class="platforms">Mobile</label>
+                
+                    <input type="checkbox" name="desktop" id="desktop">
+                    <label for="desktop" class="platforms">Desktop</label>
+            </fieldset>
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" ></textarea>
+            </div>
+            <div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>       
+        
+        <hr>
+    </main>
+    <footer>&#169; example.com</footer>
+</body>
+</html>
