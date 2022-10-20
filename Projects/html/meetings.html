@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projects/CSS/app.css">
+    <link rel="stylesheet" href="/Projects/CSS/nav.css">
+    <link rel="stylesheet" href="/Projects/CSS/meetings.css">
+    <title>Meetings</title>
+</head>
+<body>
+    <script src="/Projects/JS/meeting.js"></script>
+    <script src="/Projects/JS/nav.js"></script>
+    <header>
+        <nav class="desk-nav"  id="desk-nav-bar">
+            <div class="desk-nav-left">
+                <ul class="desk-nav-list">
+                    <li class="desk-nav-list-item">
+                        <a href="/Projects/html/calendar.html" class="desk-nav-list-link">Calendar</a>
+                    </li>
+                    <li class="desk-nav-list-item active">
+                        <a href="/Projects/html/meetings.html" class="desk-nav-list-link">Meetings</a>
+                    </li>
+                    <li class="desk-nav-list-item">
+                        <a href="/Projects/html/teams.html" class="desk-nav-list-link">Teams</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="desk-nav-right">
+                <p id="hello">Hello</p>
+                <p id="mail">priyankkatiyar11@gmail.com</p>
+                <button id="logout">Logout</button>
+            </div>
+        </nav>
+        <nav id="mob-nav-bar">
+            <div class="mob-left">
+                <h2 class="app-name">MyMeetings</h2>
+            </div>
+            <div class="mob-right">
+                <img id="ham-icon" src="/Projects/Images/hamburger.png" alt="drop-down" onclick="myFunction()">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mob-list" id="m-list">
+            <ul class="desk-nav-list" id="mob-lst">
+                <li class="desk-nav-list-item">
+                    <a href="/Projects/html/calendar.html" class="desk-nav-list-link">Calendar</a>
+                </li>
+                <li class="desk-nav-list-item active">
+                    <a href="/Projects/html/meetings.html" class="desk-nav-list-link">Meetings</a>
+                </li>
+                <li class="desk-nav-list-item">
+                    <a href="/Projects/html/teams.html" class="desk-nav-list-link">Teams</a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="main-heading">Meetings</h1>
+        <div id="meet">
+            <nav class="dialog-1">
+                <ul class="dialog-list">
+                    <li class="filter">
+                        <a href="#" onclick="myFunction1()">Filter / Search meetings</a>
+                    </li>
+                    <li class="add-meeting active-dialog">
+                        <a href="#" class="active-link" onclick="myFunction1()">Add a meeting</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="meeting-box">
+                <h1 class="meeting-heading">Add a new Meeting</h1>
+                <div class="meet-form">
+                    <form action="#" method="get">
+                        <label for="m-date">Date</label>
+                        <input type="date" id="m-date" class="meet-date">
+                        <label for="s-time">Start Time (hh:mm)</label>
+                        <input type="time" name="starting-time" id="s-time" value="00:00">
+                        <label for="e-time">End Time (hh:mm)</label>
+                        <input type="time" name="ending-time" id="e-time" value="00:00">
+                        <label for="desc">Description</label>
+                        <textarea name="description" id="desc" row="3" placeholder="What is agenda of the meeting?"></textarea>
+                        <label for="attendees">EmailID's of attendees, or team's short</label>
+                        <input type="text" name="attendees" id="attendees" placeholder="john@example.com, @annual-day, mark@example.com">
+                        <p>Seperate Email id's / team short names by commas - team short name always begin with @</p>
+                        <input type="submit" value="Add Meeting">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="srch">
+            <nav class="dialog-2">
+                <ul class="dialog-list">
+                    <li class="filter active-dialog">
+                        <a href="#" class="active-link" onclick="myFunction1()">Filter / Search meetings</a>
+                    </li>
+                    <li class="add-meeting">
+                        <a href="#" onclick="myFunction1()">Add a meeting</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="filter-box">
+                <h1 class="meeting-heading">Search For Meetings</h1>
+                <div class="filter-form">
+                    <label for="f-type">Date</label>
+                    <select name="filter-type" id="f-type">
+                        <option value="all" selected>ALL</option>
+                        <option value="past">PAST</option>
+                        <option value="today">TODAY</option>
+                        <option value="upcoming">UPCOMING</option>
+                    </select>
+                    <label for="search">Search for</label>
+                    <textarea name="search" id="search" rows=3 placeholder="Search using words which describe the meeting"></textarea>
+                    <input type="submit" value="Search">
+                </div>
+            </div>
+            <h1 class="main-heading">Meetings matching search criteria</h1>
+            <div class="search-result">
+                <div class="result-schedule">
+                    <h2 class="result-date" style="display: inline;">20 October 2022</h2>
+                    <h3 id="result-time-range" style="display: inline;">06:00 - 07:00</h3>
+                    <h3 id="agenda">Projects Kickoff</h3>
+                    <button id="excuse">Excuse yourself</button>
+                </div>
+                <div class="attendees">
+                    <div>
+                        <h3 class="attendees" style="display: inline;">Attendees: </h3>
+                        <p class="attendess-name"  style="display: inline;">mark@example.comjane@example.com</p>
+                    </div>
+                    <input type="number" name="members" id="members" placeholder="Select members">
+                    <input type="submit" value="Add" id="add">
+                </div>
+            </div>
+            <div class="search-result">
+                <div class="result-schedule">
+                    <h2 class="result-date" style="display: inline;">20 October 2022</h2>
+                    <h3 id="result-time-range" style="display: inline;">09:00 - 10:30</h3>
+                    <h3 id="agenda">AWS Architecture</h3>
+                    <button id="excuse">Excuse yourself</button>
+                </div>
+                <div class="attendees">
+                    <div>
+                        <h3 class="attendees" style="display: inline;">Attendees: </h3>
+                        <p class="attendess-name"  style="display: inline;">john@example.comjane@example.com</p>
+                    </div>
+                    <input type="number" name="members" id="members" placeholder="Select members">
+                    <input type="submit" value="Add" id="add">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

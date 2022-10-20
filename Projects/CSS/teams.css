@@ -1,0 +1,62 @@
+.main-heading+h3, .team-motive{
+    color: rgb(129, 132, 134);
+}
+.all-teams{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.team{
+    display: block;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    width: 25%;
+}
+.team-name{
+    margin: 0;
+    font-size: large;
+}
+.team-short{
+    margin: 0;
+    font-weight: bold;
+}
+.team-content{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 1rem;
+}
+#add-team{
+    width: fit-content;
+    margin: 40%;
+}
+#img-add{
+    height: 30px;
+    margin: auto;
+}
+#t-name, #t-s-name, #team-desc{
+    width: 90%;
+    border: 1px solid lightgrey;
+    padding: 0.45rem;
+    margin-bottom: 1rem;
+}
+.add-team-btn{
+    border: none;
+    width: 95%;
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(44, 128, 143);
+}
+#add-team-form{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .all-teams{
+        flex-direction: column;
+    }
+    .team{
+        width: 100%;
+    }
+}

@@ -1,0 +1,88 @@
+#mob-nav-bar, #m-list{
+    display: none;
+}
+.desk-nav-left, .mob-left{
+    float: left;
+    background-color: rgb(238,238,238);
+}
+.desk-nav-right{
+    float: right;
+    display: flex;
+    height: 40.44px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding-right: 40px;
+    background-color: rgb(238,238,238);
+}
+.desk-nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+
+}
+.desk-nav-list-item{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+.desk-nav-right>p{
+    padding: 10px;
+    margin: 0;
+    cursor: default;
+}
+.desk-nav-list-item>a{
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+}
+.active{
+    background-color: rgb(219, 219, 219);
+}
+.active>a{
+    color: black;
+}
+#mail{
+    color: rgb(44, 168, 190);
+    cursor: pointer;
+}
+#logout{
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: large;
+    padding: 0;
+    color: rgb(133, 133, 133);
+}
+.mob-left>h2{
+    color: black;
+    margin: 0;
+    margin-left: 40px;
+    height: inherit;
+    padding-top: 5px;
+}
+.mob-right{
+    float: right;
+    height: inherit;
+}
+#ham-icon{
+    height: 40px;
+}
+@media only screen and (max-width: 725px) {
+    #desk-nav-bar{
+        display:none;
+    }
+    #mob-nav-bar, .mob-list{
+        display: block;
+    }
+    .desk-nav-list{
+        flex-direction: column;
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 725px) {
+    #mob-lst{
+        display: none;
+    }
+}

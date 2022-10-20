@@ -1,0 +1,82 @@
+#srch{
+    display: none;
+}
+.dialog-list{
+    box-sizing: border-box;
+    border-bottom: 1px solid lightgray;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+}
+.dialog-list>li{
+    display: inline-block;
+    padding: 1rem;
+}
+.dialog-list>li>a{
+    text-decoration: none;
+}
+.active-dialog{
+    border: 1px solid lightgray;
+    margin: 0;
+    border-radius: 5px;
+    border-bottom: 1px solid white;
+}
+.active-link{
+    color: black;
+}
+.meeting-box, .filter-box{
+    background-color: rgb(44, 168, 190);
+    border-radius: 5px;
+}
+.meeting-box>h1, .filter-box>h1{
+    color: white;
+    margin: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgray;
+}
+.meet-form, .filter-form{
+    margin: 1rem;
+    padding-bottom: 1.5rem;
+}
+input+p{
+    margin: 0;
+    padding: 0.25rem 0 1rem 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 0.75rem;
+}
+p+input{
+    max-width: fit-content;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgb(44, 128, 143);
+    cursor: pointer;
+}
+#search+input{
+    margin-top: 1rem;
+    max-width: fit-content;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgb(44, 128, 143);
+    cursor: pointer;
+}
+#s-time, #e-time{
+    width: fit-content;
+}
+.search-result{
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border: 1px solid lightgray;
+}
+.result-schedule{
+    margin-top: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+#result-time-range, #agenda{
+    font-weight: lighter;
+}
+#agenda{
+    margin: 0.5rem 0;
+}
+.attendees{
+    margin: 1rem 0;
+}

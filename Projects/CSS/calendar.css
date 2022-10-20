@@ -1,0 +1,55 @@
+.today{
+    display: block;
+    height: 5rem;
+    overflow: hidden;
+}
+.today-left{
+    float: left;
+    color: rgba(0, 0, 0, 0.838);
+}
+.today-right{
+    float: right;
+    height: 69.33px;
+    width: 20%;
+}
+.date{
+    margin: 10px 0;
+}
+.day{
+    margin: 0;
+    color: rgb(133, 133, 133);
+}
+.date-list{
+    list-style-type:decimal;
+    margin: 0;
+    padding: 0;
+}
+.date-list-item{
+    background-color: rgb(78, 181, 199);
+    margin-top: 0.25rem;
+    min-height: 40px;
+}
+.meet{
+    margin: 4px 10px;
+    font-size: 0.75rem;
+    background-color: rgb(228, 233, 234);
+    overflow-wrap: break-word;
+}
+.meet-name>p{
+    font-weight: bold;
+    margin: 0;
+    padding: 2px;
+    border-bottom: 1px solid lightgray;
+}
+.meet-attendees>p{
+    margin: 0;
+    padding: 2px;
+}
+#sel-date{
+    margin: 1rem 0;
+    font-size: large;
+    width: 98%;
+    padding: 0;
+    height: 30px;
+    color:rgb(133, 133, 133);
+}

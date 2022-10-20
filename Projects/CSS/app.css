@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+header{
+    color: rgb(133, 133, 133);
+    font-family: sans-serif;
+    font-size: large;
+    background-color: rgb(238,238,238);
+    height: 40.44px;
+    overflow: hidden;
+}
+main{
+    margin: 0;
+    padding: 0 40px;
+}
+.main-heading{
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.838);
+    border-bottom: 1px solid lightgray;
+    padding: 21.44px 0;
+    margin: 0;
+}
+label, input, textarea, select{
+    display: block;
+    width: 100%;
+    border: none;
+}
+label{
+    margin: 0.75rem 0 0.35rem 0;
+}
+input, select{
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+textarea{
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+#excuse{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    background-color: crimson;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+#add{
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    max-width: fit-content;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgb(44, 128, 143);
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 1rem;
+}
+#members{
+    width: fit-content;
+    display: inline-block;
+    color: black;
+    background-color: transparent;
+    border: 1px solid lightgray;
+}

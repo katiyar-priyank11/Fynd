@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projects/CSS/app.css">
+    <link rel="stylesheet" href="/Projects/CSS/nav.css">
+    <link rel="stylesheet" href="/Projects/CSS/teams.css">
+    <title>Teams</title>
+</head>
+<body>
+    <script src="/Projects/JS/teams.js"></script>
+    <script src="/Projects/JS/nav.js"></script>
+    <header>
+        <nav class="desk-nav" id="desk-nav-bar">
+            <div class="desk-nav-left">
+                <ul class="desk-nav-list">
+                    <li class="desk-nav-list-item">
+                        <a href="/Projects/html/calendar.html" class="desk-nav-list-link">Calendar</a>
+                    </li>
+                    <li class="desk-nav-list-item">
+                        <a href="/Projects/html/meetings.html" class="desk-nav-list-link">Meetings</a>
+                    </li>
+                    <li class="desk-nav-list-item active">
+                        <a href="/Projects/html/teams.html" class="desk-nav-list-link">Teams</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="desk-nav-right">
+                <p id="hello">Hello</p>
+                <p id="mail">priyankkatiyar11@gmail.com</p>
+                <button id="logout">Logout</button>
+            </div>
+        </nav>
+        <nav id="mob-nav-bar">
+            <div class="mob-left">
+                <h2 class="app-name">MyMeetings</h2>
+            </div>
+            <div class="mob-right">
+                <img id="ham-icon" src="/Projects/Images/hamburger.png" alt="drop-down" onclick="myFunction()">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mob-list" id="m-list">
+            <ul class="desk-nav-list" id="mob-lst">
+                <li class="desk-nav-list-item">
+                    <a href="/Projects/html/calendar.html" class="desk-nav-list-link">Calendar</a>
+                </li>
+                <li class="desk-nav-list-item">
+                    <a href="/Projects/html/meetings.html" class="desk-nav-list-link">Meetings</a>
+                </li>
+                <li class="desk-nav-list-item active">
+                    <a href="/Projects/html/teams.html" class="desk-nav-list-link">Teams</a>
+                </li>
+            </ul>
+        </div>
+        <h1 class="main-heading">Teams</h1>
+        <h3>View and edit teams you are part of</h3>
+        <div class="all-teams">
+            <div class="team">
+                <div class="team-content">
+                    <h2 class="team-name">Customer acquisition campaign</h2>
+                    <p class="team-short">@customer-acquisition</p>
+                    <p class="team-motive">Team to come up with strategies to win over customer by FY22</p>
+                    <button id="excuse">Excuse yourself</button>
+                </div>
+                <div class="team-customise">
+                    <div>
+                        <h3 class="attendees" style="display: inline;">Members: </h3>
+                        <p class="attendess-name"  style="display: inline;">mark@example.com,<br>jane@example.com</p>
+                    </div>
+                    <input type="number" name="members" id="members" placeholder="Select members">
+                    <input type="submit" value="Add" id="add">
+                </div>
+            </div>
+            <div class="team">
+                <div class="team-content">
+                    <h2 class="team-name">MERN stack training</h2>
+                    <p class="team-short">@mern-stack-training</p>
+                    <p class="team-motive">Group attending MERN stack training for website revamp project</p>
+                    <button id="excuse">Excuse yourself</button>
+                </div>
+                <div class="team-customise">
+                    <div>
+                        <h3 class="attendees" style="display: inline;">Members: </h3>
+                        <p class="attendess-name"  style="display: inline;">john@example.com,<br>jane@example.com</p>
+                    </div>
+                    <input type="number" name="members" id="members" placeholder="Select members">
+                    <input type="submit" value="Add" id="add">
+                </div>
+            </div>
+            <div class="team">
+                <a href="#" id="add-team">
+                    <img src="/Projects/Images/add.png" alt="add" id="img-add" onclick="myFunction1()">
+                </a>
+                <div id="add-team-form">
+                    <form action="#">
+                        <div class="team-content">
+                            <input type="text" name="team-name" id="t-name" placeholder="Team name">
+                            <input type="text" name="team-short-name" id="t-s-name" placeholder="Team short name">
+                            <textarea name="description" id="team-desc" rows="2" placeholder="Provide a description for the team"></textarea>
+                        </div>
+                        <div>
+                            <h3 class="attendees" style="display: inline;">Members: </h3>
+                            <p class="attendess-name"  style="display: inline;">john@example.com,<br>jane@example.com</p>
+                        </div>
+                        <input type="number" name="members" id="members" placeholder="Select members">
+                        <input type="submit" value="Add" id="add">
+                        <button class="add-team-btn" onclick="myFunction1()">Add team</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <style>
+        .head-nav{
+            display: block;
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(50,50,51);
+        }
+        .nav-list{
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            height: 44px;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-item{
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 8px;
+            font-size: 12px;
+            font-family: sans-serif;
+            font-weight: lighter;
+            margin: 0 -8px;
+            
+        }
+        .nav-link{
+            height: 44px;
+        }
+        li a{
+            text-decoration: none;
+            color: rgb(200, 200, 200);
+        }
+        #apple{
+            width: 34px;
+        }
+        #search{
+            width: 18px;
+        }
+        #bag{
+            width: 18px;
+        }
+        .nav-content{
+            max-width: 980px;
+            margin: 0 auto;
+            position: relative;
+        }
+        li a:hover{
+            color:rgb(220, 220, 220);
+        }
+        #iP14{
+            width: 100%;
+            margin-top: 34px;
+        }
+        #iP14-2{
+            width: 100%;
+        }
+        #drop{
+            width: 34px;
+            display: none;
+        }
+        .footer-items{
+            list-style-type: none;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: rgb(128, 128, 128);
+            padding-bottom: 9.6px;
+        }
+        .footer-list{
+            display: block;
+            margin: 16px 0;
+            padding: 0;
+        }
+        .points{
+            padding: 17px 0 11px;
+        }
+        .foot{
+            display:block;
+            max-width: 980px;
+            padding: 0 22px;
+            margin: 0 auto;
+        }
+        .foot-heading{
+            font-size: 12px;
+            color: rgb(50,50,51);
+            font-family: sans-serif;
+        }
+        .foot-nav{
+            display: flex;
+            padding: 20px 0;
+            border-top: 1px solid rgb(200, 200, 200);
+        }
+        .foot-list-item{
+            list-style-type: none;
+            font-size: 12px;
+            font-family: sans-serif;
+            color: rgb(110, 110, 110);
+            margin-bottom: 9.6px;
+            cursor: pointer;
+        }
+        .foot-sec-list{
+            padding: 0;
+        }
+        .foot-column{
+            flex-basis: 25%;
+        }
+        @media only screen and (max-width: 833px){
+            /* #store,#mac,#ipad,#iphone,#watch,#airpods,#tv,#onlyapple,#accessories,#support,#search{
+                flex-flow: column;
+            } */
+            #drop{
+                display: block;
+            }
+            .nav-list{
+                flex-direction: column;
+                height: fit-content;
+                
+            }
+        }
+        .search-placeholder{
+            background-color: rgb(50,50,51);
+            margin-top: 45px;
+            display: none;
+        }
+        #search-image{
+            display: inline-block;
+        }
+        #enter{
+            display: inline-block;
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="head-nav">
+            <div class="nav-content">
+                <ul class="nav-list">
+                    <li class="nav-list" id="drop">
+                        <a href=""><img src="/Images/nav.png" alt="DropDown" id="drop"></a>
+                    </li>
+                    <li class="nav-item" id="Home">
+                        <a href="https://www.apple.com/"><img src="/Images/apple.png" alt="Apple" id="apple"></a>
+                    </li>
+                    <li class="nav-item" id="store">
+                        <a href="https://www.apple.com/store" class="nav-link">Store</a>
+                    </li>
+                    <li class="nav-item" id="mac">
+                        <a href="https://www.apple.com/mac" class="nav-link">Mac</a>
+                    </li>
+                    <li class="nav-item" id="ipad">
+                        <a href="https://www.apple.com/ipad" class="nav-link">iPad</a>
+                    </li>
+                    <li class="nav-item" id="iphone">
+                        <a href="https://www.apple.com/iphone" class="nav-link">iPhone</a>
+                    </li>
+                    <li class="nav-item" id="watch">
+                        <a href="https://www.apple.com/watch" class="nav-link">Watch</a>
+                    </li>
+                    <li class="nav-item" id="airpods">
+                        <a href="https://www.apple.com/airpods" class="nav-link">AirPods</a>
+                    </li>
+                    <li class="nav-item" id="tv">
+                        <a href="https://www.apple.com/tv-home" class="nav-link">TV & Home</a>
+                    </li>
+                    <li class="nav-item" id="onlyapple">
+                        <a href="https://www.apple.com/services" class="nav-link">Only on Apple</a>
+                    </li>
+                    <li class="nav-item" id="accessories">
+                        <a href="https://www.apple.com/accessories/all" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item" id="support">
+                        <a href="https://www.apple.com/support" class="nav-link">Support</a>
+                    </li>
+                    <li class="nav-item" id="search">
+                        <a href=""><img src="/Images/search.png" alt="search" id="search"></a>
+                    </li>
+                    <li class="nav-item" id="cart">
+                        <a href=""><img src="/Images/bag.png" alt="bag" id="bag"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="search-placeholder">
+            <div class="search-bar">
+                <div id="search-image">
+                    <img src="/Images/search.png" alt="search" id="search">
+                </div>
+                <div id="enter">
+                    <input type="text" name="" id="srch" placeholder="Search Apple.com">
+                </div>
+            </div>
+            <ul class="search-list">
+                <li class="search-item" id="store">
+                    <a href="https://www.apple.com/store" class="search-link">Store</a>
+                </li>
+                <li class="search-item" id="mac">
+                    <a href="https://www.apple.com/mac" class="search-link">Mac</a>
+                </li>
+                <li class="search-item" id="ipad">
+                    <a href="https://www.apple.com/ipad" class="search-link">iPad</a>
+                </li>
+                <li class="search-item" id="iphone">
+                    <a href="https://www.apple.com/iphone" class="search-link">iPhone</a>
+                </li>
+                <li class="search-item" id="watch">
+                    <a href="https://www.apple.com/watch" class="search-link">Watch</a>
+                </li>
+                <li class="search-item" id="airpods">
+                    <a href="https://www.apple.com/airpods" class="search-link">AirPods</a>
+                </li>
+                <li class="search-item" id="tv">
+                    <a href="https://www.apple.com/tv-home" class="search-link">TV & Home</a>
+                </li>
+                <li class="search-item" id="onlyapple">
+                    <a href="https://www.apple.com/services" class="search-link">Only on Apple</a>
+                </li>
+                <li class="search-item" id="accessories">
+                    <a href="https://www.apple.com/accessories/all" class="search-link">Accessories</a>
+                </li>
+                <li class="search-item" id="support">
+                    <a href="https://www.apple.com/support" class="search-link">Support</a>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div>
+            <img src="/Images/iP14.png" alt="iPhone14" id="iP14">
+        </div>
+        <div>
+            <img src="/Images/ip14-2.png" alt="iPhone14-2" id="iP14-2">
+        </div>
+    </main>
+    <footer style="background-color: rgb(245,245,247);">
+        <div class="foot">
+            <section class="points">
+                <ul class="footer-list">
+                    <li class="footer-items">1. iPhone 8 or later users may subscribe without an Apple Watch later this fall.</li>
+                    <li class="footer-items">A subscription is required for Apple Fitness+.</li>
+                    <li class="footer-items">Apple Fitness+ requires iOS 14.3 or later, iPadOS 14.3 or later, watchOS 7.2 or later, and tvOS 14.3 or later.</li>
+                    <li class="footer-items">To get the newest features, make sure your devices are running the latest software version.</li>
+                    <li class="footer-items">To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General > Software Update. Tap Download and Install.</li>
+                    <li class="footer-items">Available for qualifying applicants in the United States.</li>
+                    <li class="footer-items">Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.</li>
+                    <li class="footer-items">Learn more about how Apple Card applications are evaluated at <span><a href="https://support.apple.com/kb/HT209218" style="color: inherit;"> support.apple.com/kb/HT209218.</a></span></li>
+                </ul>
+            </section>
+            <nav class="foot-nav">
+                <div class="foot-column">
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">Shop and Learn</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Store</li>
+                            <li class="foot-list-item">Mac</li>
+                            <li class="foot-list-item">iPad</li>
+                            <li class="foot-list-item">iPhone</li>
+                            <li class="foot-list-item">Watch</li>
+                            <li class="foot-list-item">AirPods</li>
+                            <li class="foot-list-item">TV & Home</li>
+                            <li class="foot-list-item">AirTag</li>
+                            <li class="foot-list-item">Accessories</li>
+                            <li class="foot-list-item">Gift Cards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="foot-column">
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">Services</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Apple Music</li>
+                            <li class="foot-list-item">Apple TV+</li>
+                            <li class="foot-list-item">Apple Fitness+</li>
+                            <li class="foot-list-item">Apple News+</li>
+                            <li class="foot-list-item">Apple Arcade</li>
+                            <li class="foot-list-item">iCloud</li>
+                            <li class="foot-list-item">Apple One</li>
+                            <li class="foot-list-item">Apple Card</li>
+                            <li class="foot-list-item">Apple Books</li>
+                            <li class="foot-list-item">Apple Podcasts</li>
+                            <li class="foot-list-item">Apple Store</li>
+                        </ul>
+                    </div>
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">Account</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Manage Your Apple ID</li>
+                            <li class="foot-list-item">Apple Store Account</li>
+                            <li class="foot-list-item">iCloud.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="foot-column">
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">Apple Store</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Find a Store</li>
+                            <li class="foot-list-item">Genius Bar</li>
+                            <li class="foot-list-item">Today at Apple</li>
+                            <li class="foot-list-item">Apple Camp</li>
+                            <li class="foot-list-item">Apple Store App</li>
+                            <li class="foot-list-item">Refurbished and Clearance</li>
+                            <li class="foot-list-item">Financing</li>
+                            <li class="foot-list-item">Apple Trade In</li>
+                            <li class="foot-list-item">Order Status</li>
+                            <li class="foot-list-item">Shopping Help</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="foot-column">
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">For Business</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Apple and Business</li>
+                            <li class="foot-list-item">Shop For Business</li>
+                        </ul>
+                    </div>
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">For Education</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Apple and Education</li>
+                            <li class="foot-list-item">For K-12</li>
+                            <li class="foot-list-item">For College</li>
+                        </ul>
+                    </div>
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">For Healthcare</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Apple and Healthcare</li>
+                            <li class="foot-list-item">Health on Apple Watch</li>
+                            <li class="foot-list-item">Health Records on iPhone</li>
+                        </ul>
+                    </div>
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">For Government</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Shop for Government</li>
+                            <li class="foot-list-item">Shop for Veterans and Military</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="foot-column">
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">Apple Values</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Accessibility</li>
+                            <li class="foot-list-item">Education</li>
+                            <li class="foot-list-item">Environment</li>
+                            <li class="foot-list-item">Inclusion and Diversity</li>
+                            <li class="foot-list-item">Privacy</li>
+                            <li class="foot-list-item">Racial Equity and Justice</li>
+                            <li class="foot-list-item">Supplier Responsibility</li>
+                        </ul>
+                    </div>
+                    <div class="foot-column-section">
+                        <h3 class="foot-heading">About Apple</h3>
+                        <ul class="foot-sec-list">
+                            <li class="foot-list-item">Newsroom</li>
+                            <li class="foot-list-item">Apple Leadership</li>
+                            <li class="foot-list-item">Career Opportuinities</li>
+                            <li class="foot-list-item">Investors</li>
+                            <li class="foot-list-item">Ethics and Compliance</li>
+                            <li class="foot-list-item">Events</li>
+                            <li class="foot-list-item">Contact Apple</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
