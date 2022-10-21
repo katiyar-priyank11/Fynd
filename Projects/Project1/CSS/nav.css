@@ -68,6 +68,7 @@
 }
 #ham-icon{
     height: 40px;
+    cursor: pointer;
 }
 @media only screen and (max-width: 725px) {
     #desk-nav-bar{
