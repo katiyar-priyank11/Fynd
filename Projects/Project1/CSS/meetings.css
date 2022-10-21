@@ -66,6 +66,7 @@ p+input{
     padding: 0 1rem;
     margin: 1rem 0;
     border: 1px solid lightgray;
+    border-radius: 5px;
 }
 .result-schedule{
     margin-top: 1rem;
