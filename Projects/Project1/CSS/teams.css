@@ -27,12 +27,12 @@
     margin-bottom: 1rem;
 }
 #add-team{
-    width: fit-content;
-    margin: 40%;
+    display: grid;
+    height: 100%;
 }
 #img-add{
     height: 30px;
-    margin: auto;
+    place-self: center;
 }
 #t-name, #t-s-name, #team-desc{
     width: 90%;
