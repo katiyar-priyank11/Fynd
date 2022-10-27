@@ -2,7 +2,7 @@
   "name": "projects",
   "version": "1.0.0",
   "description": "Projects",
-  "main": "/project1/html/calendar.html",
+  "main": "/projects/project1/html/calendar.html",
   "scripts": {
     "start": "live-server --mount=/:projects --port=4000"
   },
