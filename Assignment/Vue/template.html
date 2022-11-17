@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="module">
+        import Vue from 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.esm.browser.min.js';
+  
+        // root instance
+        new Vue({
+            el: '#root',
+            template: `
+                <div>
+                    <h1>{{workshop.name}}</h1>
+                    Category: <span>{{workshop.category}}</span><br>
+                    Description: <div v-html="workshop.description"></div>
+                </div>
+            `,
+            data: {
+                    workshop: {
+                        id: 1,
+                        name: "Angular JS Bootcamp",
+                        category: "Frontend",
+                        description: "<p><strong>AngularJS</strong> (also written as <strong>Angular.js</strong>) is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.</p><p>It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications. (This flexibility has led to the acronym MVW, which stands for \"model-view-whatever\" and may also encompass model–view–presenter and model–view–adapter.)</p>",
+                        location: {
+                            address: "Tata Elxsi, Prestige Shantiniketan",
+                            city: "Bangalore",
+                            state: "Karnataka"
+                        },
+                    }
+                },
+            
+        })
+    </script>
+
+</body>
+</html>
