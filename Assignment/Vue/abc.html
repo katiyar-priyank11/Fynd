@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>v-for | Rendering lists</title>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="module">
+            import Vue from 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.esm.browser.min.js';
+
+            new Vue({
+                el: '#root',
+                data: {
+                    cities: [
+                        'Mumbai',
+                        'Gurugram',
+                        'Bengaluru',
+                        'Ahmedabad'
+                    ],
+                    newCity: ''
+                },
+                methods: {
+                    addNewCity() {
+                        this.cities.push( this.newCity );
+                    },
+                    removeCity() {
+                        const i = this.cities.indexOf(this.newCity);
+                        if(i !== -1) this.cities.splice(i, 1);
+                    }
+                },
+                template: `
+                    <section>
+                        <h1>Fynd Office Locations</h1>
+                        <hr />
+                        
+                        <ol>
+                            <li v-for="city in cities">{{city}}</li>
+                        </ol>
+                        
+                        <h2>Preferred location</h2>
+                        <label for="preferred-location">Select your preferred location</label>
+                        <select id="preferred-location">
+                            <option value="">-- Select location --</option>
+                            <option v-for="city of cities" :value="city">{{city}}</option>
+                        </select>
+                        
+                        <h2>Edit available locations</h2>
+                        <label for="edit-location">City</label>
+                        <input
+                            type="text"
+                            placeholder="City"
+                            id="edit-location"
+                            v-model="newCity"
+                        />
+                        <button @click="addNewCity">Add</button>
+                        <button @click="removeCity">Remove city</button>
+                    </section>
+                `
+            })
+        </script>
+    </body>
+</html>
