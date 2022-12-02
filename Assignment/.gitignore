@@ -1,1 +1,4 @@
-/.metadata/
+/.metadata/node_modules/
+/express\workshops-server\node_modules/
+/projects\node_modules/
+/node\node_modules/
