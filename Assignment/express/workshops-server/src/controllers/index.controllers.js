@@ -1,5 +1,9 @@
+const path = require( 'path' );
+
 const getIndex = ( req, res ) => {
-    res.send( 'This is the workshops server!!!' );
+    res.sendFile( path.join( process.cwd(), 'views/index.html' ) );
 };
 
-module.exports = {getIndex};
+module.exports = {
+    getIndex
+};
