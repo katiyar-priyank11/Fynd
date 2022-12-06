@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= pageTitle %> | <%= appTitle %></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <main class="container my-4">
+            <h1><%= pageTitle %></h1>
+            <hr />
+            <div class="row">
+                <%
+                    workshops.forEach( workshop => {
+                %>
+                    <div class="col-12 col-lg-4 d-flex my-3">
+                        <div class="card p-3">
+                            <img
+                                src="<%= workshop.imageUrl %>" class="card-img-top"
+                                alt="<%= workshop.name %>"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= workshop.name %>
+                                </h5>
+                                <div class="card-text">
+                                    <%- workshop.description %>
+                                </div>
+                                <a href="#" class="btn btn-primary">Know more</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </main>
+    </body>
+</html>

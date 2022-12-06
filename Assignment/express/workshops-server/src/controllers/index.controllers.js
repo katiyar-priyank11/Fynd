@@ -1,6 +1,7 @@
 const path = require( 'path' );
+const workshops = require( '../../data/workshops.json' );
 
-const getIndex = ( req, res ) => {
+const getHome = ( req, res ) => {
     // HTTP Header added - 'Content-Type: 'text/html' (end() will not add this header)
     // res.send( 'This is the workshops server' );
 
@@ -9,10 +10,14 @@ const getIndex = ( req, res ) => {
 };
 
 const getWorkshopsList = ( req, res ) => {
-    res.sendFile( path.join( process.cwd(), 'views/workshops-list.html' ) )
+    res.render( 'workshops-list', {
+        appTitle: req.app.get( 'app_title' ),
+        pageTitle: 'List of workshops!',
+        workshops
+    } );
 };
 
 module.exports = {
-    getIndex,
+    getHome,
     getWorkshopsList
 };
